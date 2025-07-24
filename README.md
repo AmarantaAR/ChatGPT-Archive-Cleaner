@@ -22,3 +22,7 @@ A simple JavaScript bookmarklet that automatically deletes all **archived chats*
 
 ```javascript
 javascript:(async()=>{const delay=ms=>new Promise(r=>setTimeout(r,ms));const btns=[...document.querySelectorAll('button[aria-label="Delete conversation"]')];for(const b of btns){b.click();await delay(400);const c=document.querySelector('[data-testid="delete-conversation-confirm-button"]');if(c){c.click();await delay(800);}}alert("✅ Chats archivados procesados");})();
+```
+## 📸 Quick Preview
+
+![demo](./demo.gif)
